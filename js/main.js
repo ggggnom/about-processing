@@ -17,9 +17,9 @@ let speedy = 4;
 
 
 function setup() {
-  createCanvas(1920, 950);
-
+  createCanvas(windowWidth, windowHeight);
 }
+
 
 function draw() {
   background('#FFDFEE');
@@ -29,13 +29,11 @@ function draw() {
   bounce();
 
   noFill();
-
   translate(width * 0.4, height * 0.4);
   push();
   stroke(mouseY, 150, 100);
   strokeWeight(4);
   rotate(frameCount / 350.0);
-
 
   for (i = 0; i < 20; i++) {
     rect(0 - 10 * i, 0 - 10 * i, 40 + 20 * i, 20 + 20 * i)
@@ -70,9 +68,8 @@ function draw() {
   function display() {
     noStroke();
     fill(0);
-    ellipse(x, y, 350, 350);
-
-  }
+    let blackCircles = ellipse(x, y, 350, 350);
+ }
 
   function move() {
     x = x + speedx;
@@ -88,6 +85,8 @@ function draw() {
       speedy = speedy * -1
     }
   }
+}
 
-
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
