@@ -7,7 +7,7 @@ showMenu.onclick = function() {
 let cancelMenu = document.querySelector('.cancel')
 cancelMenu.onclick = function() {
   let mobileMenu = document.querySelector('.menuOnMobile')
-  mobileMenu.style.visibility = 'hidden'
+  mobileMenu.style.visibility = 'hidden';
 }
 
 let x = 350;
