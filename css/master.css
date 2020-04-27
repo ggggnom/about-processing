@@ -1,0 +1,157 @@
+@import "rest.css";
+@import "fonts.css";
+
+
+
+
+body {
+  background-color: #FFDFEE;
+  font-family: 'DrukTextWide', sans-serif;
+  overflow: hidden;
+}
+
+
+h3 {
+  font-size: 1.5vw;
+  color: #8070F7;
+}
+a {
+  font-size: 1vw;
+  text-decoration: none;
+  color: #8070F7;
+}
+
+a:hover {
+  color: #FF3737;
+}
+a:active {
+  color: #FF3737;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+#menu__main {
+  color: white;
+}
+
+.menu__burger {
+  display: none;
+  fill: #8070F7;
+}
+
+.info {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.info__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 4vw;
+  margin-left: 2vw;
+}
+.info__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 4vw;
+  margin-left: 2vw;
+}
+.menu {
+  display: flex;
+  width: 40vw;
+  justify-content: space-between;
+}
+
+
+.menuOnMobile {
+  width: 100vw;
+  height: 100vh;
+  background-color: #8070F7;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.menuOnMobile__item {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  height: 40vh;
+  left: 25%;
+  top: 28%;
+  justify-content: space-around;
+}
+
+.menuOnMobile div a {
+  color: #89D5F6;
+  font-size: 6vw;
+}
+
+#menuOnMobile__main {
+  color: #FFDFEE;
+}
+
+.cancel {
+  margin: 6vw 6vw 0 0;
+  width: 94vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cancel img {
+  width: 7vw;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100vw;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    width: 50vw;
+  }
+
+  .menu a {
+    font-size: 1.3vw;
+  }
+
+}
+@media (max-width: 475px) {
+  .menu {
+    display: none;
+  }
+
+  h3 {
+    font-size: 2.7vw;
+  }
+
+  .menu__burger {
+    display: block;
+    width: 7vw;
+  }
+
+  .info__top {
+      margin-right: 6vw;
+      margin-top: 3vw;
+  }
+
+  .info__bottom {
+      margin-right: 6vw;
+      margin-bottom: 3vw;
+  }
+}
