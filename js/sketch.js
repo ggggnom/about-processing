@@ -5,7 +5,7 @@ let speedy = 4;
 
 
 function setup() {
-  createCanvas(1400, 800, /*WEBGL*/);
+  createCanvas(windowWidth, windowHwight);
   
 }
 
@@ -76,6 +76,8 @@ function draw() {
       speedy = speedy * -1
     }
   }
+}
 
-  
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
