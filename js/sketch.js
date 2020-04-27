@@ -5,7 +5,7 @@ let speedy = 4;
 
 
 function setup() {
-  createCanvas(windowWidth, windowHwight);
+  createCanvas(windowWidth, windowHeight);
   
 }
 
