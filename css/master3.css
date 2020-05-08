@@ -1,6 +1,7 @@
 @import "reset.css";
 @import "fonts.css";
 
+
 html {
   font-size: 4px;
 }
@@ -16,7 +17,7 @@ body {
   display: grid;
   grid-gap: 100px 50px;
   grid-template-columns: 1fr 350px 350px 1fr;
-  width: 97vw;
+  width: 94vw;
   margin: 5rem 10rem;
 }
 
@@ -114,11 +115,11 @@ h4{
   display: none;
 }
 
-#menu__base {
+#menu__p5 {
   color: #8070F7;
 }
 
-#menu__base:hover {
+#menu__p5:hover {
   text-decoration: none;
 }
 
@@ -159,6 +160,11 @@ aside {
     font-family: 'Montserrat';
     grid-column: 1/2;
     margin-top: 2rem;
+}
+
+canvas {
+  display: block;
+  grid-column: 2/4;
 }
 
 span {
