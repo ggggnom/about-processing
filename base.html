@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ФУНКЦИИ JAVA SCRIPT</title>
+    <link rel="stylesheet" href="./css/master2.css">
+    <link rel="stylesheet" href="./css/prism.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="grid">
+        <div class="info">
+          <h4>JS ЧЕРЕЗ ПРОЦЕССИНГ</h4>
+          <p>JS</p>
+          <img class="menu__burger" src="./img/menu.svg" alt="">
+          <div class="menu">
+            <a>ГЛАВНАЯ</a>
+            <a id="menu__base">OСНОВЫ</a>
+            <a>АНИМАЦИЯ</a>
+            <a>СКРОЛЛ</a>
+          </div>
+       </div>
+
+       <div class="menuOnMobile">
+         <div class="cancel">
+           <img src="./img/clear.svg" alt="">
+         </div>
+         <div class="pls">
+           <div class="menuOnMobile__item">
+             <a>ГЛАВНАЯ</a>
+             <a id="menuOnMobile__base">ОСНОВЫ</a>
+             <a>АНИМАЦИЯ</a>
+             <a>СКРОЛЛ</a>
+           </div>
+         </div>
+       </div>
+
+       <h1>CАМОЕ ПРОСТОЕ И&nbsp;ОСНОВНОЕ</h1>
+       <h2>ВЗАИМОДЕЙСТВИЕ: ALERT, PROPMT, CONFIRM</h2>
+       <h3>ALERT</h3>
+       <aside class="">
+         Используй, если хочешь сообщить что-то важное полюзователю или в&nbsp;качестве уведомления/предупреждения
+       </aside>
+       <div class="about">
+         <p class="paragraph">Функция alert отобразит окно в&nbsp;браузере и&nbsp;приостановит дальнейшее выполнение скриптов до&nbsp;тех пор, пока пользователь не&nbsp;нажмёт кнопку &laquo;OK&raquo;. Это небольшое окно с&nbsp;сообщением называется модальным окном.</p>
+         <p>Понятие модальное означает, что пользователь не&nbsp;может взаимодействовать с&nbsp;интерфейсом остальной части страницы, нажимать на&nbsp;другие кнопки и&nbsp;т.д.&nbsp;до&nbsp;тех пор, пока взаимодействует с&nbsp;окном. В&nbsp;данном случае&nbsp;&mdash; пока не&nbsp;будет нажата кнопка &laquo;OK&raquo;.</p>
+         <div class="code">
+            <p>alert(message);<br>alert("Hello");</p>
+         </div>
+         <div class="button">
+           <p id="goAlert" >RUN CODE</p>
+         </div>
+       </div>
+
+       <h3>PROMPT</h3>
+       <aside class="">
+          Используй, если надо узнать возраст пользователя или другую мин. информацию о&nbsp;пользователе, которая может повлиять на&nbsp;его взаимодесвие с&nbsp;сайтом
+       </aside>
+       <div class="about">
+         <p>Эта функция отобразит модальное окно с&nbsp;текстом, полем для ввода текста и&nbsp;кнопками OK/Отмена. Функция prompt принимает два аргумента: <span>title</span> и <span>default</span>.Первый аргумент отвечает за&nbsp;текст, отображаемый в&nbsp;модальном окне. Второй параметр необезателен. Он&nbsp;устанавливает начальное значение в&nbsp;поле для текста в&nbsp;окне.
+         Пользователь может напечатать что-либо в&nbsp;поле ввода и&nbsp;нажать OK. Он&nbsp;также может отменить ввод нажатием на&nbsp;кнопку &laquo;Отмена&raquo; или нажав на&nbsp;клавишу Esc.</p>
+         <div class="code">
+            <p class="paragraph">prompt(title, [default]);</p>
+            <p class="">let age = prompt('Сколько тебе лет?', 100);<br>alert(`Тебе ${age} лет!`); // Тебе 100 лет!</p>
+         </div>
+         <div class="button">
+           <p id="goPrompt">RUN CODE</p>
+         </div>
+       </div>
+
+       <h3>CONFIRM</h3>
+       <aside class="">
+          Используй, если cледует получить ответ от пользователя "да" или "нет"
+       </aside>
+       <div class="about">
+         <p>Функция confirm отображает модальное окно с&nbsp;текстом вопроса question и&nbsp;двумя кнопками: OK&nbsp;и&nbsp;Отмена. Результат true, если нажата кнопка OK. В&nbsp;других случаях&nbsp;&mdash; false.</p>
+         <div class="code">
+            <p class="paragraph">result = confirm(question);</p>
+            <p>let isBoss = confirm("Ты здесь главный?");<br>
+alert( isBoss ); // true, если нажата OK</p>
+         </div>
+         <div class="button">
+           <p id="goConfirm">RUN CODE</p>
+         </div>
+       </div>
+    </div>
+
+   <script src="js/base.js"></script>
+   <script src="js/prism.js"></script>
+  </body>
+</html>
