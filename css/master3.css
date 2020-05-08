@@ -100,6 +100,8 @@ h4{
 .menu a {
   font-size: 3rem;
   font-family: 'DrukTextWide';
+  color: black;
+  text-decoration: none;
 }
 
 .menu a:hover {
