@@ -152,6 +152,7 @@ p {
   font-size: 5rem;
   line-height: 8rem;
 }
+
 .first_function__description {
   grid-column-start: 2;
   grid-column-end: 5;

@@ -33,13 +33,41 @@ goIf.onclick = function() {
   if (year == 2015) alert( 'Вы правы!' );
 }
 
-let goElse = document.getElementById('.goElse')
+let goElse = document.getElementById('goElse')
 goElse.onclick = function() {
   let year = prompt('В каком году появилась спецификация ECMAScript-2015?', '');
 
-if (year == 2015) {
-  alert( 'Да вы знаток!' );
-} else {
-  alert( 'А вот и неправильно!' ); // любое значение, кроме 2015
+    if (year == 2015) {
+      alert( 'Да вы знаток!' );
+    } else {
+      alert( 'А вот и неправильно!' ); // любое значение, кроме 2015
+    }
 }
+
+
+let goIfElse = document.getElementById('goIfElse')
+goIfElse.onclick = function() {
+  let year = prompt('В каком году появилась спецификация ECMAScript-2015?', '');
+
+    if (year < 2015) {
+      alert( 'Это слишком рано...' );
+    } else if (year > 2015) {
+      alert( 'Это поздновато' );
+    } else {
+      alert( 'Верно!' );
+    }
+}
+
+let goes = document.getElementById('goes')
+goes.onclick = function() {
+  let accessAllowed;
+    let age = prompt('Сколько вам лет?', '');
+
+    if (age > 18) {
+     accessAllowed = true;
+    } else {
+     accessAllowed = false;
+    }
+
+    alert(accessAllowed);
 }

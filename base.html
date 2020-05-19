@@ -113,13 +113,13 @@ alert( isBoss ); // true, если нажата OK</p>
           Else используй, если помимо одного условия, есть второе
        </aside>
        <div class="about">
-         <p class="">Оператор <span class="color">if</span>&nbsp;может содержать необязательный блок &laquo;else&raquo; (&laquo;иначе&raquo;). Выполняется, когда условие ложно.</p>
+         <p class="paragraph">Оператор <span class="color">if</span>&nbsp;может содержать необязательный блок &laquo;else&raquo; (&laquo;иначе&raquo;). Выполняется, когда условие ложно.</p>
 
          <p>Например:</p>
          <div class="code">
-            <p>let year = prompt('В каком году появилась спецификация ECMAScript-2015?', '');<br>
+            <p class="paragraph">let year = prompt('В каком году появилась спецификация ECMAScript-2015?', '');<br></p>
 
-            <span>if (year == 2015){</span> <br>
+            <p><span>if (year == 2015){</span> <br>
             <span>  alert( 'Да вы знаток!' );</span><br>
             <span>} else {</span><br>
             <span>alert( 'А вот и неправильно!' ); // любое значение, кроме 2015</span><br>
@@ -130,28 +130,83 @@ alert( isBoss ); // true, если нажата OK</p>
          </div>
        </div>
 
-       <h3>ELSE</h3>
+       <h3>Несколько условий: &laquo;else&nbsp;if&raquo;</h3>
        <aside class="">
-          Else используй, если помимо одного условия, есть второе
+          Else If используй, если есть несколько условий
        </aside>
        <div class="about">
-         <p class="">Оператор <span class="color">if</span>&nbsp;может содержать необязательный блок &laquo;else&raquo; (&laquo;иначе&raquo;). Выполняется, когда условие ложно.</p>
+         <p class="paragraph">Иногда, нужно проверить несколько вариантов условия. Для этого используется блок<span class="color"> else&nbsp;if.</span></p>
 
          <p>Например:</p>
          <div class="code">
-            <p>let year = prompt('В каком году появилась спецификация ECMAScript-2015?', '');<br>
+           <p class="paragraph">let year = prompt('В каком году появилась спецификация ECMAScript-2015?', '');</p>
 
-            <span>if (year == 2015){</span> <br>
-            <span>  alert( 'Да вы знаток!' );</span><br>
-            <span>} else {</span><br>
-            <span>alert( 'А вот и неправильно!' ); // любое значение, кроме 2015</span><br>
-            }</p>
+           <p>if (year < 2015) { <br>
+              <span>   alert( 'Это слишком рано...' ); <br></span>
+            } else if (year > 2015) { <br>
+              <span>   alert( 'Это поздновато' ); <br></span>
+            } else { <br>
+              <span>   alert( 'Верно!' ); <br></span>
+           }</p>
          </div>
          <div class="button">
-           <p id="goElse" >RUN CODE</p>
+           <p id="goIfElse" >RUN CODE</p>
          </div>
+
+         <p class="paragraph under">В&nbsp;приведённом выше коде, JavaScript сначала проверит <span class="color">year &lt; 2015</span>. Если это неверно, он&nbsp;переходит к&nbsp;следующему условию<span class="color"> year &gt; 2015</span>. Если оно тоже ложно, тогда сработает последний alert.</p>
+         <p>Блоков <span class="color">else if</span>&nbsp;может быть и&nbsp;больше. Присутствие блока<span class="color"> else</span> не&nbsp;является обязательным.</p>
        </div>
 
+
+       <h3>Условный оператор „?“</h3>
+       <aside class="">
+          Else используй, если есть несколько условий
+       </aside>
+       <div class="about">
+         <p class="paragraph">Иногда, нам нужно назначить переменную в&nbsp;зависимости от&nbsp;условия.</span></p>
+
+         <p>Например:</p>
+         <div class="code">
+           <p class="paragraph">let accessAllowed;<br>
+              let age = prompt('Сколько вам лет?', '');<br></p>
+
+            <p>if (age > 18) {<br>
+                <span>accessAllowed = true;<br></span>
+              } else {<br>
+              <span>  accessAllowed = false;<br></span>
+              }</p>
+
+            <p>alert(accessAllowed);<br></p>
+         </div>
+         <div class="button">
+           <p id="goes" >RUN CODE</p>
+         </div>
+
+         <p class="paragraph under">Так называемый &laquo;условный&raquo; оператор &laquo;вопросительный знак&raquo; позволяет нам сделать это более коротким и&nbsp;простым способом.</p>
+
+         <p class="paragraph under">Оператор представлен знаком вопроса<span class="color"> ?</span>. Его также называют &laquo;тернарный&raquo;, так как этот оператор, единственный в&nbsp;своём роде, имеет три аргумента.</p>
+
+        <p>Cинтаксис</p>
+
+        <div class="code">
+          <p>let result = условие ? значение1 : значение2;</p>
+        </div>
+        <p class="paragraph under">Сначала вычисляется условие: если оно истинно, тогда возвращается значение1, в&nbsp;противном случае&nbsp;&mdash; значение2.</p>
+        <p>Например:</p>
+        <div class="code">
+          <p>let accessAllowed = (age > 18) ? true : false;</p>
+        </div>
+
+        <p class="paragraph under">Технически, мы&nbsp;можем опустить круглые скобки вокруг<span class="color"> age &gt; 18</span>. Оператор вопросительного знака имеет низкий приоритет, поэтому он&nbsp;выполняется после сравнения <span class="color">></span>.</p>
+        <p>Этот пример будет делать то&nbsp;же самое, что и&nbsp;предыдущий:</p>
+
+        <div class="code">
+          <p>// оператор сравнения "age > 18" выполняется первым в любом случае<br>
+              // (нет необходимости заключать его в скобки)<br>
+              let accessAllowed = age > 18 ? true : false;<br></p>
+        </div>
+
+       </div>
 
 
 
