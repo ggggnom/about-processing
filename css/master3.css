@@ -323,6 +323,10 @@ span {
     font-family: 'DrukTextWide';
     font-size: 4rem;
   }
+
+  img {
+    width: 90vw;
+  }
 }
 
 @media (max-width: 500px) {
