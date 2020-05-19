@@ -45,7 +45,7 @@
        <p>The <span class="color">drawTarget()</span> function makes it easy to draw many distinct *targets. Each call to <span class="color">drawTarget()</span> specifies the position, size, and number of *rings for each target.</p>
        <img src="img/circles.png" alt="">
        <div class="code">
-          <p>
+          <p class="paragraph">
              function setup() { <br>
               <span> createCanvas(720, 400);<br></span>
               <span>background(51);<br></span>
@@ -53,14 +53,14 @@
               <span> noLoop();<br></span>
              };</p>
 
-          <p>function draw() {<br>
+          <p class="paragraph">function draw() {<br>
               <span>drawTarget(width * 0.25, height * 0.4, 200, 4);<br></span>
               <span>drawTarget(width * 0.5, height * 0.5, 300, 10);<br></span>
               <span>drawTarget(width * 0.75, height * 0.3, 120, 6);<br></span>
             }</p>
 
 
-          <p>function drawTarget(xloc, yloc, size, num) {<br>
+          <p class="paragraph">function drawTarget(xloc, yloc, size, num) {<br>
             <span>const grayvalues = 255 / num;<br></span>
             <span>const steps = size / num;<br></span>
             <span>for (let i = 0; i < num; i++) {<br></span>
@@ -74,19 +74,32 @@
        </div>
      </div>
 
-     <h3>ФУНКЦИЯ drawTarget()</h3>
-     <aside class="">Cтепень сложности: средне<br>Cтатическая композиция из кругов с применением drawTarget()</aside>
+     <h3>ФУНКЦИЯ drawCircles()</h3>
+     <aside class="">Cтепень сложности: средне<br>Cтатическая композиция из кругов с применением drawCircles()</aside>
      <div class="about">
-       <p>The <span class="color">drawTarget()</span> function makes it easy to draw many distinct *targets. Each call to <span class="color">drawTarget()</span> specifies the position, size, and number of *rings for each target.</p>
-       <img src="img/circles.png" alt="">
+       <p>A demonstration of recursion, which means functions call themselves. Notice how the <span class="color">drawCircle()</span> function calls itself at the end of its block. It continues to do this until the variable "level" is equal to 1.</p>
+       <img src="img/many_circles.png" alt="">
        <div class="code">
-          <p>
-             function setup() { <br>
-              <span> createCanvas(720, 400);<br></span>
-              <span>background(51);<br></span>
-              <span>noStroke();<br></span>
-              <span> noLoop();<br></span>
-             };</p>
+          <p class="paragraph"> function setup() {<br>
+             <span>createCanvas(720, 560);<br></span>
+            <span> noStroke();<br></span>
+            <span> noLoop();<br></span>
+            }</p>
+
+            <p>function draw() {<br>
+                 <span>drawCircle(width / 2, 280, 6);<br></span>
+              }</p>
+          <p class="paragraph">function drawCircle(x, radius, level) {<br>
+            <span>  const tt = (126 * level) / 4.0;<br></span>
+            <span>  fill(tt);<br></span>
+            <span>  ellipse(x, height / 2, radius * 2, radius * 2);<br></span>
+            <span>  if (level > 1) {<br></span>
+              <span class="double">  level = level - 1;<br></span>
+              <span class="double">  drawCircle(x - radius / 2, radius / 2, level);<br></span>
+              <span class="double">  drawCircle(x + radius / 2, radius / 2, level);<br></span>
+            <span>   }<br></span>
+            }
+            </p>
        </div>
      </div>
 
