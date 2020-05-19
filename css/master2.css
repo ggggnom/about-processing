@@ -163,10 +163,11 @@ aside {
     margin-top: 2rem;
 }
 
-span {
+ .color {
   background-color: black;
   color: white;
 }
+
 .button {
   display: flex;
   justify-content: flex-end;
@@ -204,12 +205,23 @@ span {
   margin-top: 12rem;
   background-color: black;
   padding: 3rem 6rem 3rem 6rem;
+  overflow-x: scroll;
 }
 
 .code p {
   color: white;
   font-family: 'Hack';
 }
+
+
+.under{
+  margin-top: 50px;
+}
+
+span {
+  margin-left: 25px;
+}
+
 
 
 @media (max-width: 1280px) {

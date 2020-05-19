@@ -26,3 +26,20 @@ cancelMenu.onclick = function() {
   let mobileMenu = document.querySelector('.menuOnMobile')
   mobileMenu.style.visibility = 'hidden';
 }
+
+let goIf = document.getElementById('goIf')
+goIf.onclick = function() {
+  let year = prompt('В каком году появилась спецификация ECMAScript-2015?', '');
+  if (year == 2015) alert( 'Вы правы!' );
+}
+
+let goElse = document.getElementById('.goElse')
+goElse.onclick = function() {
+  let year = prompt('В каком году появилась спецификация ECMAScript-2015?', '');
+
+if (year == 2015) {
+  alert( 'Да вы знаток!' );
+} else {
+  alert( 'А вот и неправильно!' ); // любое значение, кроме 2015
+}
+}

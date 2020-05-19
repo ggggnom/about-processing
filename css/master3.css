@@ -169,7 +169,7 @@ canvas {
   grid-column: 2/4;
 }
 
-span {
+ .color{
   background-color: black;
   color: white;
 }
@@ -217,6 +217,19 @@ span {
   font-family: 'Hack';
 }
 
+img {
+  margin-top: 50px;
+  width: 700px;
+  grid-column: 2/4;
+}
+
+span {
+  margin-left: 25px;
+}
+
+.double {
+  margin-left: 45px;
+}
 
 @media (max-width: 1280px) {
   .grid {

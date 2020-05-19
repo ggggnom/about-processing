@@ -42,15 +42,50 @@
      <h3>ФУНКЦИЯ drawTarget()</h3>
      <aside class="">Cтепень сложности: средне<br>Cтатическая композиция из кругов с применением drawTarget()</aside>
      <div class="about">
-       <p>The <span>drawTarget()</span> function makes it easy to draw many distinct *targets. Each call to <span>drawTarget()</span> specifies the position, size, and number of *rings for each target.</p>
-       <canvas id="defaultCanvas0" class="p5Canvas" width="700px" height="400px"></canvas>
+       <p>The <span class="color">drawTarget()</span> function makes it easy to draw many distinct *targets. Each call to <span class="color">drawTarget()</span> specifies the position, size, and number of *rings for each target.</p>
+       <img src="img/circles.png" alt="">
        <div class="code">
           <p>
-             function setup() {
-               createCanvas(720, 400);
-               background(51);
-               noStroke();
-               noLoop();
+             function setup() { <br>
+              <span> createCanvas(720, 400);<br></span>
+              <span>background(51);<br></span>
+              <span>noStroke();<br></span>
+              <span> noLoop();<br></span>
+             };</p>
+
+          <p>function draw() {<br>
+              <span>drawTarget(width * 0.25, height * 0.4, 200, 4);<br></span>
+              <span>drawTarget(width * 0.5, height * 0.5, 300, 10);<br></span>
+              <span>drawTarget(width * 0.75, height * 0.3, 120, 6);<br></span>
+            }</p>
+
+
+          <p>function drawTarget(xloc, yloc, size, num) {<br>
+            <span>const grayvalues = 255 / num;<br></span>
+            <span>const steps = size / num;<br></span>
+            <span>for (let i = 0; i < num; i++) {<br></span>
+              <span class="double">fill(i * grayvalues);<br></span>
+              <span class="double">ellipse(xloc, yloc, size - i * steps, size - i * steps);<br></span>
+            <span>}<br></span>
+          }</p>
+
+
+
+       </div>
+     </div>
+
+     <h3>ФУНКЦИЯ drawTarget()</h3>
+     <aside class="">Cтепень сложности: средне<br>Cтатическая композиция из кругов с применением drawTarget()</aside>
+     <div class="about">
+       <p>The <span class="color">drawTarget()</span> function makes it easy to draw many distinct *targets. Each call to <span class="color">drawTarget()</span> specifies the position, size, and number of *rings for each target.</p>
+       <img src="img/circles.png" alt="">
+       <div class="code">
+          <p>
+             function setup() { <br>
+              <span> createCanvas(720, 400);<br></span>
+              <span>background(51);<br></span>
+              <span>noStroke();<br></span>
+              <span> noLoop();<br></span>
              };</p>
        </div>
      </div>
@@ -58,10 +93,5 @@
 
     </div>
 
-
-
-
-
-   <script src="js/aboutP5.js"></script>
   </body>
 </html>

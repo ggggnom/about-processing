@@ -57,7 +57,7 @@
           Используй, если надо узнать возраст пользователя или другую мин. информацию о&nbsp;пользователе, которая может повлиять на&nbsp;его взаимодесвие с&nbsp;сайтом
        </aside>
        <div class="about">
-         <p>Эта функция отобразит модальное окно с&nbsp;текстом, полем для ввода текста и&nbsp;кнопками OK/Отмена. Функция prompt принимает два аргумента: <span>title</span> и <span>default</span>.Первый аргумент отвечает за&nbsp;текст, отображаемый в&nbsp;модальном окне. Второй параметр необезателен. Он&nbsp;устанавливает начальное значение в&nbsp;поле для текста в&nbsp;окне.
+         <p>Эта функция отобразит модальное окно с&nbsp;текстом, полем для ввода текста и&nbsp;кнопками OK/Отмена. Функция prompt принимает два аргумента: <span class="color">title</span> и <span >default</span>.Первый аргумент отвечает за&nbsp;текст, отображаемый в&nbsp;модальном окне. Второй параметр необезателен. Он&nbsp;устанавливает начальное значение в&nbsp;поле для текста в&nbsp;окне.
          Пользователь может напечатать что-либо в&nbsp;поле ввода и&nbsp;нажать OK. Он&nbsp;также может отменить ввод нажатием на&nbsp;кнопку &laquo;Отмена&raquo; или нажав на&nbsp;клавишу Esc.</p>
          <div class="code">
             <p class="paragraph">prompt(title, [default]);</p>
@@ -83,7 +83,82 @@ alert( isBoss ); // true, если нажата OK</p>
            <p id="goConfirm">RUN CODE</p>
          </div>
        </div>
+
+
+
+       <h2>УСЛОВНЫЕ ОПЕРАТОРЫ : if, '?'</h2>
+       <h3>IF</h3>
+       <aside class="">
+         Самый распространенный и&nbsp;простой оператор, который можно использовать для получения ответа да/нет, на&nbsp;выбор по&nbsp;критерия и&nbsp;условиям и&nbsp;многое другое
+       </aside>
+       <div class="about">
+         <p class="">Оператор <span class="color">if(...)</span> вычисляет условие в&nbsp;скобках&nbsp;и, если результат <span class="color">true</span>, то&nbsp;выполняет блок кода.</p>
+         <div class="code">
+            <p>let year = prompt('В каком году появилась спецификация ECMAScript-2015?', ''); <br>if (year == 2015) alert( 'Вы правы!' );</p>
+         </div>
+         <div class="button">
+           <p id="goIf" >RUN CODE</p>
+         </div>
+
+         <p class="under">В&nbsp;примере выше, условие&nbsp;&mdash; это простая проверка на&nbsp;равенство (year == 2015), но&nbsp;оно может быть и&nbsp;гораздо более сложным.
+         Если мы&nbsp;хотим выполнить более одной инструкции, то&nbsp;нужно заключить блок кода в&nbsp;фигурные скобки:.</p>
+         <div class="code">
+            <p>if (year == 2015) { <br><span>alert( "Правильно!" );</span><br> <span>alert( "Вы такой умный!" );</span><br>}</p>
+         </div>
+       </div>
+
+
+       <h3>ELSE</h3>
+       <aside class="">
+          Else используй, если помимо одного условия, есть второе
+       </aside>
+       <div class="about">
+         <p class="">Оператор <span class="color">if</span>&nbsp;может содержать необязательный блок &laquo;else&raquo; (&laquo;иначе&raquo;). Выполняется, когда условие ложно.</p>
+
+         <p>Например:</p>
+         <div class="code">
+            <p>let year = prompt('В каком году появилась спецификация ECMAScript-2015?', '');<br>
+
+            <span>if (year == 2015){</span> <br>
+            <span>  alert( 'Да вы знаток!' );</span><br>
+            <span>} else {</span><br>
+            <span>alert( 'А вот и неправильно!' ); // любое значение, кроме 2015</span><br>
+            }</p>
+         </div>
+         <div class="button">
+           <p id="goElse" >RUN CODE</p>
+         </div>
+       </div>
+
+       <h3>ELSE</h3>
+       <aside class="">
+          Else используй, если помимо одного условия, есть второе
+       </aside>
+       <div class="about">
+         <p class="">Оператор <span class="color">if</span>&nbsp;может содержать необязательный блок &laquo;else&raquo; (&laquo;иначе&raquo;). Выполняется, когда условие ложно.</p>
+
+         <p>Например:</p>
+         <div class="code">
+            <p>let year = prompt('В каком году появилась спецификация ECMAScript-2015?', '');<br>
+
+            <span>if (year == 2015){</span> <br>
+            <span>  alert( 'Да вы знаток!' );</span><br>
+            <span>} else {</span><br>
+            <span>alert( 'А вот и неправильно!' ); // любое значение, кроме 2015</span><br>
+            }</p>
+         </div>
+         <div class="button">
+           <p id="goElse" >RUN CODE</p>
+         </div>
+       </div>
+
+
+
+
     </div>
+
+
+
 
    <script src="js/base.js"></script>
    <script src="js/prism.js"></script>
